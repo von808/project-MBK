@@ -1,0 +1,23 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+@import 'elements/icons';
+@import 'elements/text';
+@import 'elements/btns';
+@import 'elements/swiper';
+@import 'elements/form';
+@import 'elements/dropdown';
+
+@import 'blocks/nav';
+
+@import 'components/header';
+@import 'components/footer';
+@import 'components/burger';
+@import 'components/modal';
+
+@import 'page/index';
+
+@import 'media';

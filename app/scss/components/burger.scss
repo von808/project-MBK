@@ -1,0 +1,179 @@
+.burger {
+  max-width: 623px;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+
+  background: var(--white);
+
+  &__open {
+    width: 22px;
+    height: 22px;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__open-line {
+    width: 100%;
+    height: 2px;
+
+    display: block;
+
+    background: #0d0d0d;
+  }
+
+  &__close {
+    width: 22px;
+    height: 22px;
+
+    position: relative;
+  }
+
+  &__close-line {
+    width: 100%;
+    height: 2px;
+
+    display: block;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+
+    background: #0d0d0d;
+
+    &:nth-child(2) {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &-overlay {
+    position: fixed;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: 25;
+
+    transform: translateX(100%);
+    transition: transform .2s ease;
+
+    background: rgba(#0d0d0d, .6);
+
+    &.burger-show {
+      transform: translateX(0);
+    }
+  }
+
+  &__menu {
+    width: 100%;
+    height: 100%;
+    padding: 30px 0;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__head {
+    width: 100%;
+    height: 40px;
+    padding: 0 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+
+    .logo {
+      max-width: 99px;
+    }
+
+    .phone-box {
+      display: none;
+    }
+  }
+
+  &__body {}
+
+  .nav {
+    max-width: 100%;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .nav__item {
+    padding: 20px 30px;
+
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav__item-head {
+    width: 100%;
+    min-height: 23px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+
+    .icons-angle {
+      transition: all .2s ease;
+    }
+  }
+
+  .nav__item-body {
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height .2s ease;
+  }
+
+  .accardion-show {
+    .nav__item-head .icons-angle {
+      transform: rotate(180deg);
+    }
+  }
+
+  .menu__content {
+    padding: 30px 0 0 0;
+
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__bottom {
+    padding: 0 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .socials {
+      display: none;
+    }
+  }
+
+  &__bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__bottom-btns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+
+    .btn {
+      width: 100%;
+    }
+  }
+}

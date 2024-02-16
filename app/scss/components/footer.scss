@@ -1,0 +1,161 @@
+.footer {
+
+  &__inner {
+    position: relative;
+  }
+
+  &__content {
+    padding: 50px 0 30px;
+
+    display: grid;
+    grid-template-columns: minmax(233px, 4.9fr) minmax(1px, 6fr) minmax(290px, 7.1fr) minmax(250px, 6fr);
+    grid-template-columns: minmax(233px, 5fr) minmax(1px, 6fr) minmax(290px, 7fr) minmax(250px, 6fr);
+    grid-template-rows: auto;
+    gap: 30px;
+
+    border-bottom: 1px solid var(--grey-100);
+  }
+
+  &__box {
+    padding-top: 17px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 57px;
+
+    .btn {
+      max-width: 233px;
+      width: 100%;
+    }
+  }
+
+  .btn-fonts {
+    opacity: 0.6;
+  }
+
+  .icons-logo {
+    width: 170px;
+    height: 68px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .nav {
+      height: auto;
+    }
+
+    .nav__list {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  }
+
+  &__contacts {
+    display: grid;
+    grid-template-columns: auto 49px;
+    grid-template-rows: auto;
+    justify-content: space-between;
+    gap: 29px 0;
+  }
+
+  &__contacts-box {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  &__contacts-items {
+    max-height: 125px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .phone-box {
+    align-items: flex-start;
+    gap: 3px;
+  }
+
+  .socials {
+    width: fit-content;
+
+    &__list {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &__link {
+      width: 49px;
+      height: 49px;
+      background-color: var(--grey-100);
+
+      .icons {
+        width: 14px;
+        height: 14px;
+        fill: var(--blue);
+
+        &-whatsapp-phone {
+          width: 7px;
+          height: 7px;
+          fill: var(--grey-100);
+        }
+      }
+    }
+  }
+
+  &__address {
+    grid-column: span 2;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 7px;
+
+    &-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 4px;
+    }
+  }
+
+  &__bottom {
+    padding: 31px 0 47px;
+
+    display: grid;
+    grid-template-columns: minmax(233px, 4.9fr) minmax(1px, 6fr) minmax(290px, 7.1fr) minmax(250px, 6fr);
+    grid-template-columns: minmax(233px, 5fr) minmax(1px, 6fr) minmax(290px, 7fr) minmax(250px, 6fr);
+    grid-template-rows: auto;
+    gap: 30px;
+  }
+
+  &__bottom-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    &:first-child {
+      grid-column: span 2;
+    }
+
+    div:not([class]) {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 8px;
+    }
+
+    span:not([class]),
+    a:not([class]) {
+      opacity: 0.6;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@font-face {
+  font-family: TTHoves;
+  src:local('TTHoves')
+      url(../fonts/TTHoves-Regular.woff2),
+      url(../fonts/TTHoves-Regular.woff);
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: TTHoves;
+  src:local('TTHoves')
+      url(../fonts/TTHoves-Medium.woff2),
+      url(../fonts/TTHoves-Medium.woff);
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}

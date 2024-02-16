@@ -1,0 +1,54 @@
+<div class="modals">
+  <div class="modal-overlay">
+    <div class="modal modals__project-planning" data-target="project-planning">
+      <div class="modal__project-planning">
+        <button class="modal-close btn-close">
+          <span class="btn-close__line"></span>
+          <span class="btn-close__line"></span>
+        </button>
+        <div class="modal-content">
+          <div class="modal__head">
+            <h2 class="h2">Рассчитать проект</h2>
+            <span class="text-16">Заполните заявку и наши менеджеры свяжутся с вами в течении суток.</span>
+          </div>
+          <div class="modal__body">
+            <form class="contact-us__form js-form">
+              <div class="contact-us__form-inputs">
+                <div class="dropdown">
+                  <svg class="icons-angle">
+                    <use xlink:href="images/sprite.svg#angle"></use>
+                  </svg>
+                  <button class="dropdown__button" type="button">Тип проекта</button>
+                  <ul class="dropdown__list btn-fonts">
+                    <li class="dropdown__list-item" data-value="value"><span>Строительство промышленных объектов</span></li>
+                    <li class="dropdown__list-item" data-value="value"><span>Реконструкция зданий и сооружений</span></li>
+                    <li class="dropdown__list-item" data-value="value"><span>Производство металлоконструкций</span></li>
+                    <li class="dropdown__list-item" data-value="value"><span>Строительство загородных домов</span></li>
+                    <li class="dropdown__list-item" data-value="value"><span>Проектирование</span></li>
+                  </ul>
+                  <input type="text" name="select-category" value="" class="dropdown__input-hidden">
+                </div>
+                <input class="input js-input" type="text" placeholder="Ваше Имя">
+                <input class="input js-input js-input-phone" type="tel" minlength="8" placeholder="+7 (999) 123 11 11">
+                <input class="input js-input js-input-email" type="email" placeholder="E-mail">
+                <textarea class="input textarea" placeholder="Введите комментарий (опционально)"></textarea>
+              </div>
+              <div class="contact-us__form-bottom">
+                <div class="btn btn-blue">
+                  <button class="btn-el" type="submit"></button>
+                  <div class="btn__content-box">
+                    <div class="btn__content">
+                      <span>Рассчитать проект</span>
+                      <span>Рассчитать проект</span>
+                    </div>
+                  </div>
+                </div>
+                <span class="text-14">Нажимая на&nbsp;кнопку &laquo;Отправить&raquo; вы&nbsp;даёте согласие на&nbsp;<a href="#!">обработку персональных данных</a></span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

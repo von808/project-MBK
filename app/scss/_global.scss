@@ -1,0 +1,76 @@
+html {}
+
+body {
+  overflow-x: hidden;
+  min-width: 320px;
+
+  background: var(--white);
+
+  font-family: TTHoves, sans-serif;
+  color: var(--black);
+  font-weight: 400;
+
+  &.body-lock {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.d-none {
+  display: none;
+}
+
+.tab-item {
+  display: none;
+
+  &.tab-active {
+    display: block;
+  }
+}
+
+section {
+  margin-bottom: 150px;
+}
+
+#btn-up {
+  position: fixed;
+  right: calc(50% - 750px);
+  bottom: 45px;
+  z-index: 15;
+  transform: rotate(-90deg);
+
+  display: none;
+
+  &.btn-up-show {
+    display: flex;
+  }
+
+  &.btn-arrow {
+    background-color: var(--blue);
+
+    .icons-btn-arrow {
+      stroke: var(--white);
+    }
+  }
+}

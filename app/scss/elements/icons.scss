@@ -1,0 +1,53 @@
+[class*="icons-"] {
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.icons {
+  flex-shrink: 0;
+
+  &-logo {
+    width: 99px;
+    height: 40px;
+    fill: var(--black);
+  }
+
+  &-whatsapp-box {
+    position: relative;
+    width: 10px;
+    height: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-whatsapp-phone {
+    position: absolute;
+    top: 50%;
+    left: 54%;
+    transform: translate(-40%, -50%);
+  }
+
+  &-point {
+    width: 4px;
+    height: 4px;
+  }
+
+  &-marker {
+    width: 24px;
+    height: 24px;
+  }
+
+  &-btn-arrow {
+    width: 15px;
+    height: 9px;
+    stroke: var(--black);
+    transition: transform 0.4s ease;
+  }
+
+  &-angle {
+    width: 10px;
+    height: 11px;
+    fill: none;
+  }
+}
