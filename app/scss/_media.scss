@@ -308,7 +308,7 @@
   }
 
   .advantages {
-    padding: 30px;
+    padding: 32px 30px;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -366,6 +366,26 @@
   .modals .btn-close {
     width: 22px;
     height: 22px;
+  }
+
+  .news__swiper .swiper-slide:not(:first-child) .section-swiper__image-box {
+    max-height: 200px;
+  }
+
+  #btn-up {
+    bottom: 40px;
+  }
+
+  .intro .swiper-controls {
+    gap: 20px;
+  }
+
+  .intro__content {
+    bottom: 176px;
+  }
+
+  .banner .socials__list {
+    gap: 20px;
   }
 }
 
@@ -492,6 +512,7 @@
   .footer__box {
     grid-column: span 2;
     gap: 30px;
+    padding: 0;
   }
 
   .footer__box .btn {
@@ -499,7 +520,7 @@
   }
 
   .footer__nav .nav__list {
-    gap: 9px;
+    gap: 10px;
 
     font-size: 12px;
     line-height: 160%;
@@ -515,7 +536,7 @@
   }
 
   .footer__contacts-items {
-    gap: 20px;
+    gap: 24px;
   }
 
   .footer .socials__link {
@@ -525,7 +546,7 @@
 
   .footer__content {
     padding: 40px 0 30px;
-    gap: 50px 20px;
+    gap: 49px 20px;
   }
 
   .footer__bottom {
@@ -760,6 +781,7 @@
     .topbar {
       display: block;
       border: none;
+      height: auto;
 
       .nav__list {
         flex-direction: column;

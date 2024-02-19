@@ -3,13 +3,13 @@ html {}
 body {
   overflow-x: hidden;
   min-width: 320px;
-
+  
   background: var(--white);
-
+  
   font-family: TTHoves, sans-serif;
   color: var(--black);
   font-weight: 400;
-
+  
   &.body-lock {
     overflow: hidden;
   }
@@ -24,6 +24,7 @@ body {
 }
 
 .main {
+  overflow-x: hidden;
   flex: 1 0 auto;
 }
 

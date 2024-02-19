@@ -90,6 +90,7 @@ textarea::placeholder,
   font-size: 12px;
   line-height: 140%;
   letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 
@@ -102,6 +103,10 @@ textarea::placeholder,
 a {
   color: inherit;
   transition: all .1s linear;
+}
+
+.link a:hover {
+  opacity: 0.5;
 }
 
 .color {

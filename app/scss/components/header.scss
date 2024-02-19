@@ -1,4 +1,6 @@
 .topbar {
+  height: 38px;
+
   border-bottom: 1px solid rgba(#3e3e3e, .1);
   background: var(--white);
   color: var(--black);
@@ -14,7 +16,7 @@
 .nav {
   max-width: 458px;
   width: 100%;
-  height: 39px;
+  height: 38px;
 
   &__list {
     height: 100%;
@@ -116,8 +118,8 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 16px;
     gap: 11px;
+    gap: 16px;
   }
 
   .logo {
@@ -164,7 +166,7 @@
     }
 
     .btn-transp {
-      border: 1px solid rgba(255, 255, 255, 0.5);
+      outline: 1px solid rgba(255, 255, 255, 0.5);
       color: var(--white);
     }
 

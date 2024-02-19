@@ -727,6 +727,7 @@
     display: flex;
     flex-direction: column;
     gap: 13px;
+    gap: 16px;
   }
 
   &__author {
@@ -771,6 +772,7 @@
     .section-swiper__image-box {
       aspect-ratio: 360/250;
       max-width: 360px;
+      max-height: 400px;
     }
   }
 }
