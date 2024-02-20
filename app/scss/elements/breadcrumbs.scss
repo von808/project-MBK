@@ -1,0 +1,40 @@
+.breadcrumbs {
+  &__inner {
+    padding: 30px 0;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 10px;
+  }
+
+  &__item {
+
+    &:last-child {
+      pointer-events: none;
+    }
+
+    &:not(:last-child) {
+      padding-right: 14px;
+
+      background-image: url(../images/icons/point.svg);
+      background-repeat: no-repeat;
+      background-size: 4px 5px;
+      background-position: right center;
+
+      a {
+        opacity: 0.5;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+    }
+  }
+
+  &__link {}
+}

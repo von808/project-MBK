@@ -3,13 +3,13 @@ html {}
 body {
   overflow-x: hidden;
   min-width: 320px;
-  
+
   background: var(--white);
-  
+
   font-family: TTHoves, sans-serif;
   color: var(--black);
   font-weight: 400;
-  
+
   &.body-lock {
     overflow: hidden;
   }
@@ -50,7 +50,8 @@ body {
   }
 }
 
-section {
+section,
+.section {
   margin-bottom: 150px;
 }
 
@@ -73,5 +74,16 @@ section {
     .icons-btn-arrow {
       stroke: var(--white);
     }
+  }
+}
+
+.list {
+  li {
+    padding-left: 18px;
+
+    background-image: url(../images/icons/point.svg);
+    background-repeat: no-repeat;
+    background-size: 6px 7px;
+    background-position: left 0.625em;
   }
 }
