@@ -1,16 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  //============================================================ASD-START
-
-  //============================================================ASD-END
-
-  //============================================================ASD-START
-  let asd = document.querySelector('.asd');
-  if (asd) {
-
-  }
-  //============================================================ASD-END
-
   //============================================================BURGER-START
   const burgerOpen = document.querySelector('.burger__open');
   const burgerClose = document.querySelector('.burger__close');
@@ -361,10 +350,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //============================================================SMOOTH-SCROLL-END
 
-  //============================================================ASD-START
+  //============================================================ACCARDION-START
   let accardionWrapper = document.querySelector('.accardion');
   if (accardionWrapper) {
-    //============================================================ACCARDION-START
     document.querySelectorAll('.nav__item-head').forEach((el) => {
       el.addEventListener('click', () => {
         let content = el.nextElementSibling;
@@ -380,9 +368,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
     });
-    //============================================================ACCARDION-END
   }
-  //============================================================ASD-END
+  //============================================================ACCARDION-END
 
 });
 
