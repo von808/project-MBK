@@ -41,3 +41,24 @@
 
   &-button-next {}
 }
+
+.swiper-index-box {
+  opacity: 0.5;
+}
+
+.swiper__controls-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  z-index: 2;
+
+  .swiper-index-box {
+    color: var(--white);
+    opacity: 1;
+  }
+}

@@ -8,7 +8,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0 10px;
+    gap: 6px 10px;
   }
 
   &__item {
@@ -37,4 +37,17 @@
   }
 
   &__link {}
+}
+
+.page {
+  &__services-object {
+    .breadcrumbs__inner {
+      padding: 30px 0 20px;
+    }
+  }
+  &__projects-object {
+    .breadcrumbs__inner {
+      padding: 30px 0 20px;
+    }
+  }
 }

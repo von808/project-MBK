@@ -11,8 +11,17 @@
 @import 'elements/form';
 @import 'elements/dropdown';
 @import 'elements/breadcrumbs';
+@import 'elements/accardion';
+@import 'elements/pagination';
 
-@import 'blocks/nav';
+@import 'blocks/reviews';
+@import 'blocks/video';
+@import 'blocks/accardion';
+@import 'blocks/team';
+@import 'blocks/about';
+@import 'blocks/projects';
+@import 'blocks/services';
+@import 'blocks/contacts';
 
 @import 'components/header';
 @import 'components/footer';
@@ -21,5 +30,14 @@
 
 @import 'page/index';
 @import 'page/services';
+@import 'page/services-object';
+@import 'page/projects-object';
+@import 'page/news-open';
+@import 'page/about-company';
+@import 'page/contacts';
+@import 'page/licenses';
+@import 'page/reviews';
+@import 'page/privacy';
+@import 'page/404';
 
 @import 'media';

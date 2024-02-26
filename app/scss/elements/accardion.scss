@@ -1,0 +1,12 @@
+.accardion {
+
+  &-head,
+  .faq-head {
+    cursor: pointer;
+  }
+
+  &-body,
+  .faq-body {
+    transition: all .2s ease;
+  }
+}

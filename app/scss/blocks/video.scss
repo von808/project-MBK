@@ -1,0 +1,26 @@
+.video {
+  width: 100dvw;
+  height: 800px;
+  margin-bottom: 100px;
+
+  position: relative;
+
+  &__media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.page {
+  &__projects-object {
+    .video {
+      margin-bottom: 149px;
+    }
+  }
+}

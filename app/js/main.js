@@ -11,6 +11,58 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   //============================================================ASD-END
 
+  //============================================================ASD-START
+  let file = document.querySelector('.input-file__wrapper');
+  if (file) {
+    const outputImgs = document.getElementById("file-output-imgs");
+    const filepickerImgs = document.getElementById("input-file-imgs");
+    const clearImgs = document.getElementById("input-file-imgs-clear");
+
+    filepickerImgs.addEventListener("change", (event) => {
+      const files = event.target.files;
+      outputImgs.textContent = "";
+
+      filepickerImgs.closest('.input-file__wrapper').classList.add('file-added')
+
+      for (const file of files) {
+        const li = document.createElement("li");
+        li.textContent = file.name;
+        outputImgs.appendChild(li);
+      }
+    });
+
+    clearImgs.addEventListener('click', function () {
+      filepickerImgs.value = '';
+
+      filepickerImgs.closest('.input-file__wrapper').classList.remove('file-added')
+    }, false);
+
+
+    const outputAva = document.getElementById("file-output-ava");
+    const filepickerAva = document.getElementById("input-file-ava");
+    const clearAva = document.getElementById("input-file-ava-clear");
+
+    filepickerAva.addEventListener("change", (event) => {
+      const files = event.target.files;
+      outputAva.textContent = "";
+
+      filepickerAva.closest('.input-file__wrapper').classList.add('file-added')
+
+      for (const file of files) {
+        const li = document.createElement("li");
+        li.textContent = file.name;
+        outputAva.appendChild(li);
+      }
+    });
+
+    clearAva.addEventListener('click', function () {
+      filepickerAva.value = '';
+
+      filepickerAva.closest('.input-file__wrapper').classList.remove('file-added')
+    }, false);
+  }
+  //============================================================ASD-END
+
   //============================================================BURGER-START
   const burgerOpen = document.querySelector('.burger__open');
   const burgerClose = document.querySelector('.burger__close');
@@ -258,10 +310,61 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     },
   });
-  var swiper = new Swiper(".news__swiper", {
+  var swiper = new Swiper(".main-news__swiper", {
     a11y: false,
     slidesPerView: 'auto',
     spaceBetween: 20,
+  });
+  var swiper = new Swiper(".team__swiper", {
+    a11y: false,
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      769: {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+      },
+    },
+  });
+  var swiper = new Swiper(".services-object__swiper", {
+    a11y: false,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".swiper-button-next--obj",
+      prevEl: ".swiper-button-prev--obj",
+    },
+  });
+  var swiper = new Swiper(".news-open__swiper", {
+    a11y: false,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  var swiper = new Swiper(".projects-object__swiper-images", {
+    a11y: false,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  var swiper = new Swiper(".projects-object__swiper-plans", {
+    a11y: false,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
   //============================================================SWIPER-END
 
@@ -276,7 +379,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     headerAbs()
+  }
+  //============================================================INTRO-END
 
+  //============================================================INTRO-SWIPER-START
+  let introMain = document.querySelector('.intro__swiper');
+  if (introMain) {
     const introSwiperCurrent = document.querySelector('.swiper-index-current');
     const introSwiperMax = document.querySelector('.swiper-index-max');
     const introSwiperSlides = intro.querySelectorAll('.swiper-slide');
@@ -301,7 +409,7 @@ document.addEventListener('DOMContentLoaded', () => {
       introSwiperCurrent.innerHTML = swiperIndex;
     });
   }
-  //============================================================INTRO-END
+  //============================================================INTRO-SWIPER-END
 
   //============================================================TAB-START
   const tabBtn = document.querySelectorAll('.tab-btn')
@@ -379,8 +487,72 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
     });
+
+    document.querySelectorAll('.accardion-head').forEach((el) => {
+      el.addEventListener('click', () => {
+        let content = el.nextElementSibling;
+
+        if (content.style.maxHeight) {
+          document.querySelectorAll('.accardion-body').forEach((el) => el.style.maxHeight = null)
+          document.querySelectorAll('.accardion-body').forEach((el) => el.closest('.accardion-item').classList.remove('accardion-show'))
+        } else {
+          document.querySelectorAll('.accardion-body').forEach((el) => el.style.maxHeight = null)
+          document.querySelectorAll('.accardion-body').forEach((el) => el.closest('.accardion-item').classList.remove('accardion-show'))
+          content.style.maxHeight = content.scrollHeight + 'px';
+          el.closest('.accardion-item').classList.add('accardion-show');
+        }
+      })
+    });
+
+    document.querySelectorAll('.faq-head').forEach((el) => {
+      el.addEventListener('click', () => {
+        let content = el.nextElementSibling;
+
+        if (content.style.maxHeight) {
+          document.querySelectorAll('.faq-body').forEach((el) => el.style.maxHeight = null)
+          document.querySelectorAll('.faq-body').forEach((el) => el.closest('.accardion-item').classList.remove('accardion-show'))
+        } else {
+          document.querySelectorAll('.faq-body').forEach((el) => el.style.maxHeight = null)
+          document.querySelectorAll('.faq-body').forEach((el) => el.closest('.accardion-item').classList.remove('accardion-show'))
+          content.style.maxHeight = content.scrollHeight + 'px';
+          el.closest('.accardion-item').classList.add('accardion-show');
+        }
+      })
+    });
   }
   //============================================================ACCARDION-END
+
+  //============================================================MAP-START
+  let map = document.querySelector('.map');
+  if (map) {
+    function init() {
+      let map = new ymaps.Map('map', {
+        center: [59.932684, 30.358061],
+        zoom: 14,
+      });
+
+      let placemark = new ymaps.Placemark([59.929984, 30.362161], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'images/icons/map-marker.svg',
+        iconImageSize: [96, 126],
+        iconImageOffset: [-95, -125],
+      });
+
+      map.controls.remove('geolocationControl'); // удаляем геолокацию
+      map.controls.remove('searchControl'); // удаляем поиск
+      map.controls.remove('trafficControl'); // удаляем контроль трафика
+      map.controls.remove('typeSelector'); // удаляем тип
+      map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+      map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+      map.controls.remove('rulerControl'); // удаляем контрол правил
+      map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+
+      map.geoObjects.add(placemark);
+    }
+
+    ymaps.ready(init);
+  }
+  //============================================================MAP-END
 
 });
 

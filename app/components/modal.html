@@ -20,8 +20,10 @@
                   </svg>
                   <button class="dropdown__button" type="button">Тип проекта</button>
                   <ul class="dropdown__list btn-fonts">
-                    <li class="dropdown__list-item" data-value="value"><span>Строительство промышленных объектов</span></li>
-                    <li class="dropdown__list-item" data-value="value"><span>Реконструкция зданий и сооружений</span></li>
+                    <li class="dropdown__list-item" data-value="value"><span>Строительство промышленных объектов</span>
+                    </li>
+                    <li class="dropdown__list-item" data-value="value"><span>Реконструкция зданий и сооружений</span>
+                    </li>
                     <li class="dropdown__list-item" data-value="value"><span>Производство металлоконструкций</span></li>
                     <li class="dropdown__list-item" data-value="value"><span>Строительство загородных домов</span></li>
                     <li class="dropdown__list-item" data-value="value"><span>Проектирование</span></li>
@@ -43,7 +45,74 @@
                     </div>
                   </div>
                 </div>
-                <span class="text-14">Нажимая на&nbsp;кнопку &laquo;Отправить&raquo; вы&nbsp;даёте согласие на&nbsp;<a href="#!">обработку персональных данных</a></span>
+                <span class="text-14">Нажимая на&nbsp;кнопку &laquo;Отправить&raquo; вы&nbsp;даёте согласие на&nbsp;<a
+                    href="#!">обработку персональных данных</a></span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modals__modal" data-target="write-reviews">
+      <div class="modal__write-reviews">
+        <button class="modal-close btn-close">
+          <span class="btn-close__line"></span>
+          <span class="btn-close__line"></span>
+        </button>
+        <div class="modal-content">
+          <div class="modal__head">
+            <h2 class="h2">Написать отзыв</h2>
+            <span class="text-16">Мы всегда будем рады любому отзыву. От них зависит доверие наших клиентов.</span>
+          </div>
+          <div class="modal__body">
+            <form class="contact-us__form js-form">
+              <div class="contact-us__form-inputs">
+                <input class="input js-input" type="text" placeholder="Ваше Имя">
+                <input class="input js-input js-input-email" type="email" placeholder="E-mail">
+                <textarea class="input textarea" placeholder="Напишите Текст отзыва"></textarea>
+                <div class="input-file__wrapper">
+                  <label class="input-file__label input-file__box input-file__add">
+                    <svg class="icons-file">
+                      <use xlink:href="images/sprite.svg#file-add"></use>
+                    </svg>
+                    <input class="input-file control" id="input-file-imgs" type="file" accept="image/*" multiple>
+                    <span class="btn-fonts muted">Прикрепить фото отзыва (опционально)</span>
+                  </label>
+                  <div class="input-file__box input-file__remove" id="input-file-imgs-clear">
+                    <svg class="icons-file">
+                      <use xlink:href="images/sprite.svg#file-remove"></use>
+                    </svg>
+                    <ul class="btn-fonts file-output" id="file-output-imgs"></ul>
+                  </div>
+                </div>
+                <div class="input-file__wrapper">
+                  <label class="input-file__label input-file__box input-file__add">
+                    <svg class="icons-file">
+                      <use xlink:href="images/sprite.svg#file-add"></use>
+                    </svg>
+                    <input class="input-file control" id="input-file-ava" type="file" accept="image/*" multiple>
+                    <span class="btn-fonts muted">Прикрепить аватар (опционально)</span>
+                  </label>
+                  <div class="input-file__box input-file__remove" id="input-file-ava-clear">
+                    <svg class="icons-file">
+                      <use xlink:href="images/sprite.svg#file-remove"></use>
+                    </svg>
+                    <ul class="btn-fonts file-output" id="file-output-ava"></ul>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-us__form-bottom">
+                <div class="btn btn-blue">
+                  <button class="btn-el" type="submit"></button>
+                  <div class="btn__content-box">
+                    <div class="btn__content">
+                      <span>отправить</span>
+                      <span>отправить</span>
+                    </div>
+                  </div>
+                </div>
+                <span class="text-14">Нажимая на&nbsp;кнопку &laquo;Отправить&raquo; вы&nbsp;даёте согласие на&nbsp;<a
+                    href="#!">обработку персональных данных</a></span>
               </div>
             </form>
           </div>

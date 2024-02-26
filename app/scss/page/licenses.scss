@@ -1,0 +1,64 @@
+.licenses {
+  &__inner {}
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__item {
+    width: 100%;
+    min-height: 153px;
+    padding: 40px 50px 40px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+    background: var(--grey-100);
+
+    transition: all .2s ease;
+
+    .icons-download {
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover {
+      background: var(--blue);
+      color: var(--white);
+
+      .icons-download {
+        fill: var(--white);
+      }
+    }
+  }
+
+  &__item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h4 {
+      -ms-text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      -ms-line-clamp: 2;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      display: -webkit-box;
+      display: box;
+      word-wrap: break-word;
+      -webkit-box-orient: vertical;
+      box-orient: vertical;
+    }
+
+    span {
+      opacity: 0.5;
+    }
+  }
+
+}

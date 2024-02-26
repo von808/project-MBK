@@ -50,4 +50,21 @@
     height: 11px;
     fill: none;
   }
+
+  &-close {
+    width: 16px;
+    height: 16px;
+    stroke: var(--black);
+  }
+
+  &-download {
+    width: 14px;
+    height: 18px;
+    fill: var(--blue);
+  }
+
+  &-file {
+    width: 16px;
+    height: 16px;
+  }
 }

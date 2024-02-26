@@ -55,13 +55,13 @@
     outline: 1px solid rgba(62, 62, 62, 0.2);
     color: var(--black);
   }
-  
+
   &-white {
     border: none;
     background: var(--white);
     color: var(--black);
   }
-  
+
   &-grey {
     background: var(--grey-100);
     color: var(--black);
@@ -112,6 +112,22 @@
         transform: translateX(200%);
       }
     }
+
+    &-grey {
+      .btn-arrow {
+        background-color: var(--grey-100);
+
+        &:hover {
+          background-color: var(--blue);
+        }
+      }
+
+      .swiper-button.swiper-button-disabled,
+      &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    }
   }
 
   &-close {
@@ -128,7 +144,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) rotate(45deg);
-      &:nth-child(2){
+
+      &:nth-child(2) {
         transform: translate(-50%, -50%) rotate(-45deg);
       }
     }

@@ -34,3 +34,64 @@ input {
     border-color: var(--red);
   }
 }
+
+.input-file {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+
+  &__label {
+    position: relative;
+    cursor: pointer;
+  }
+}
+
+.input-file__wrapper {
+  cursor: pointer;
+
+  &.file-added {
+    .input-file__add {
+      display: none;
+    }
+
+    .input-file__remove {
+      display: flex;
+    }
+  }
+
+  &:hover {
+    .file-output {
+      opacity: 0.5;
+    }
+  }
+
+  span,
+  .icons-file {
+    pointer-events: none;
+  }
+}
+
+.input-file__box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+
+.input-file__add {}
+
+.input-file__remove {
+  display: none;
+
+  .file-output {
+    pointer-events: none;
+  }
+}
+
+.file-output {
+  transition: all .2s ease;
+}

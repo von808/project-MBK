@@ -1,0 +1,65 @@
+.services-object {
+  overflow-x: hidden;
+
+  &__inner {
+    margin-right: -50px;
+
+    display: grid;
+    grid-template-columns: 416px minmax(416px, 1040px);
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__swiper-wrapper {}
+
+  &__swiper {
+    max-width: 1040px;
+    width: 100%;
+  }
+
+  .swiper-wrapper {}
+
+  .swiper-slide {
+    width: fit-content;
+  }
+
+  &__slide {}
+
+  &__slide-info-box {
+    min-width: 416px;
+    width: 416px;
+    height: 700px;
+    padding-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__slide-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__slide-image-box {
+    max-width: 1040px;
+    width: 100%;
+    height: 700px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__swiper-controls-box {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

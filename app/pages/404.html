@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper page__404" id="wrapper">
+    <!--=include burger.html-->
+    <!--=include header.html-->
+    <main class="main">
+      <section class="page-404 intro">
+        <div class="page-404__image-box">
+          <picture>
+            <source type="image/avif" srcset="images/404/404.avif">
+            <source type="image/webp" srcset="images/404/404.webp">
+            <img class="page-404__img" src="images/404/404.jpg" alt="page-404">
+          </picture>
+        </div>
+        <div class="container">
+          <div class="page-404__inner">
+            <div class="page-404__content">
+              <div class="page-404__content-text">
+                <h1 class="h1">Страница не найдена</h1>
+                <div class="page-404__content-descr text-16">
+                  <p>
+                    К сожалению, страница, которую вы ищете, не существует. Возможно она была удалена, или был введен неверный адрес.
+                  </p>
+                </div>
+              </div>
+              <div class="btn btn-white">
+                <a class="btn-el" href="/"></a>
+                <div class="btn__content-box">
+                  <div class="btn__content">
+                    <span>На главную</span>
+                    <span>На главную</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="page-404__title">404</span>
+          </div>
+        </div>
+      </section>
+      <section class="contact-us">
+        <div class="container">
+          <div class="contact-us__inner">
+            <picture>
+              <source type="image/avif" srcset="images/contact-us/contact-us-bg.avif">
+              <source type="image/webp" srcset="images/contact-us/contact-us-bg.webp">
+              <img class="contact-us__img" src="images/contact-us/contact-us-bg.png" alt="contact-us" loading="lazy">
+            </picture>
+            <div class="contact-us__content">
+              <div class="contact-us__head">
+                <h2 class="h1"><span class="color">Связаться</span> с нами</h2>
+                <span class="text-16">Заполните заявку и наши менеджеры свяжутся с вами в течение суток.</span>
+              </div>
+              <form class="contact-us__form js-form">
+                <div class="contact-us__form-inputs">
+                  <input class="input js-input" type="text" placeholder="Ваше Имя">
+                  <input class="input js-input js-input-phone" type="tel" placeholder="+7 (999) 123 11 11">
+                  <input class="input js-input js-input-email" type="email" placeholder="E-mail">
+                  <textarea class="input textarea" placeholder="Введите комментарий (опционально)"></textarea>
+                </div>
+                <div class="contact-us__form-bottom">
+                  <div class="btn btn-blue">
+                    <button class="btn-el" type="submit"></button>
+                    <div class="btn__content-box">
+                      <div class="btn__content">
+                        <span>Отправить заявку</span>
+                        <span>Отправить заявку</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="text-14">Нажимая на кнопку «Отправить» вы даёте согласие на <a href="#!">обработку
+                      персональных данных</a></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--=include footer.html-->
