@@ -26,33 +26,37 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-  const tlAboutCompany = gsap.timeline()
+  let AboutCompany = document.querySelector('.page__about-company');
+  if (AboutCompany) {
 
-  tlAboutCompany.fromTo(
-    '.about-company__title',
-    {
-      opacity: 0,
-      y: 50,
-    },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1.1
-    },
-    0.2,
-  ).fromTo(
-    '.about-company__video',
-    {
-      opacity: 0,
-      y: 50,
-    },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 1.1
-    },
-    0.4,
-  )
+    const tlAboutCompany = gsap.timeline()
+
+    tlAboutCompany.fromTo(
+      '.about-company__title',
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.1
+      },
+      0.2,
+    ).fromTo(
+      '.about-company__video',
+      {
+        opacity: 0,
+        y: 50,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.1
+      },
+      0.4,
+    )
+  }
   //============================================================ANIMATIONS-END
 
   //============================================================FANCYBOX-START
