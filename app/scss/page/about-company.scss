@@ -29,6 +29,31 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    .achievements__numb {
+      opacity: 0;
+      transform: translateY(100px);
+      transition: all .8s cubic-bezier(.12, .46, .47, .99);
+    }
+
+    .achievements__numb-text {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all .6s cubic-bezier(.12, .46, .47, .99);
+      transition-delay: 0.3s;
+    }
+
+    &.animate {
+      .achievements__numb {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .achievements__numb-text {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 }
 

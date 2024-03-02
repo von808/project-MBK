@@ -11,7 +11,66 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   //============================================================ASD-END
 
-  //============================================================ASD-START
+  //============================================================ANIMATIONS-START
+  gsap.registerPlugin(ScrollTrigger);
+
+  let achievementsItem = gsap.utils.toArray('.achievements__item')
+
+  achievementsItem.forEach(item => {
+    gsap.from(item, {
+      scrollTrigger: {
+        trigger: item,
+        start: '0 85%',
+        onToggle: () => item.classList.add('animate'),
+      },
+    })
+  })
+
+  const tlAboutCompany = gsap.timeline()
+
+  tlAboutCompany.fromTo(
+    '.about-company__title',
+    {
+      opacity: 0,
+      y: 50,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1.1
+    },
+    0.2,
+  ).fromTo(
+    '.about-company__video',
+    {
+      opacity: 0,
+      y: 50,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1.1
+    },
+    0.4,
+  )
+  //============================================================ANIMATIONS-END
+
+  //============================================================FANCYBOX-START
+  Fancybox.bind('[data-fancybox]', {
+    contentClick: "toggleCover",
+    Images: {
+      zoom: false,
+      initialSize: "fit",
+      Panzoom: {
+        panMode: "mousemove",
+        mouseMoveFactor: 1.1,
+        mouseMoveFriction: 0.12,
+      },
+    },
+  });
+  //============================================================FANCYBOX-END
+
+  //============================================================INPUT-FILE-START
   let file = document.querySelector('.input-file__wrapper');
   if (file) {
     const outputImgs = document.getElementById("file-output-imgs");
@@ -61,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
       filepickerAva.closest('.input-file__wrapper').classList.remove('file-added')
     }, false);
   }
-  //============================================================ASD-END
+  //============================================================INPUT-FILE-END
 
   //============================================================BURGER-START
   const burgerOpen = document.querySelector('.burger__open');
@@ -283,6 +342,19 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollbar: {
       el: ".swiper-line",
     },
+    pagination: {
+      el: '.swiper-index-current',
+      type: 'custom',
+      renderCustom: function (swiper, current, total) {
+        if (current < 10) {
+          current = `0${current}`
+        }
+        if (total < 10) {
+          total = `0${total}`
+        }
+        return current + ' / ' + total;
+      }
+    },
   });
   var swiper = new Swiper(".shares__swiper", {
     a11y: false,
@@ -338,6 +410,19 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: ".swiper-button-next--obj",
       prevEl: ".swiper-button-prev--obj",
     },
+    pagination: {
+      el: '.swiper-index-current',
+      type: 'custom',
+      renderCustom: function (swiper, current, total) {
+        if (current < 10) {
+          current = `0${current}`
+        }
+        if (total < 10) {
+          total = `0${total}`
+        }
+        return current + ' / ' + total;
+      }
+    },
   });
   var swiper = new Swiper(".news-open__swiper", {
     a11y: false,
@@ -346,6 +431,19 @@ document.addEventListener('DOMContentLoaded', () => {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: '.swiper-index-current',
+      type: 'custom',
+      renderCustom: function (swiper, current, total) {
+        if (current < 10) {
+          current = `0${current}`
+        }
+        if (total < 10) {
+          total = `0${total}`
+        }
+        return current + ' / ' + total;
+      }
     },
   });
   var swiper = new Swiper(".projects-object__swiper-images", {
@@ -356,6 +454,19 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    pagination: {
+      el: '.swiper-index-current',
+      type: 'custom',
+      renderCustom: function (swiper, current, total) {
+        if (current < 10) {
+          current = `0${current}`
+        }
+        if (total < 10) {
+          total = `0${total}`
+        }
+        return current + ' / ' + total;
+      }
+    },
   });
   var swiper = new Swiper(".projects-object__swiper-plans", {
     a11y: false,
@@ -364,6 +475,19 @@ document.addEventListener('DOMContentLoaded', () => {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: '.swiper-index-current',
+      type: 'custom',
+      renderCustom: function (swiper, current, total) {
+        if (current < 10) {
+          current = `0${current}`
+        }
+        if (total < 10) {
+          total = `0${total}`
+        }
+        return current + ' / ' + total;
+      }
     },
   });
   //============================================================SWIPER-END
@@ -381,35 +505,6 @@ document.addEventListener('DOMContentLoaded', () => {
     headerAbs()
   }
   //============================================================INTRO-END
-
-  //============================================================INTRO-SWIPER-START
-  let introMain = document.querySelector('.intro__swiper');
-  if (introMain) {
-    const introSwiperCurrent = document.querySelector('.swiper-index-current');
-    const introSwiperMax = document.querySelector('.swiper-index-max');
-    const introSwiperSlides = intro.querySelectorAll('.swiper-slide');
-    let introSwiperLength = introSwiperSlides.length;
-
-    function format() {
-      if (introSwiperLength < 10) {
-        introSwiperLength = `0${introSwiperLength}`
-      }
-    }
-    format()
-    introSwiperMax.innerHTML = introSwiperLength;
-
-    introSwiper.on('transitionEnd', function () {
-      let swiperIndex = introSwiper.realIndex + 1;
-      function format() {
-        if (swiperIndex < 10) {
-          swiperIndex = `0${swiperIndex}`
-        }
-      }
-      format()
-      introSwiperCurrent.innerHTML = swiperIndex;
-    });
-  }
-  //============================================================INTRO-SWIPER-END
 
   //============================================================TAB-START
   const tabBtn = document.querySelectorAll('.tab-btn')

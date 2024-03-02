@@ -2442,18 +2442,12 @@ input:invalid {
   display: flex;
   flex-direction: column;
   gap: 100px;
-}
-.projects-object__main-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-}
-.projects-object__main-content {
   display: grid;
   grid-template-columns: minmax(290px, 990px) minmax(290px, 480px);
-  gap: 30px;
+  gap: 60px 30px;
 }
 .projects-object__swiper-wrapper {
+  grid-column: 1/2;
   position: relative;
 }
 .projects-object__swiper-wrapper .swiper {
@@ -2477,11 +2471,17 @@ input:invalid {
   z-index: 2;
 }
 .projects-object__info {
+  grid-column: 2/3;
+  grid-row: 1/5;
+  min-height: 700px;
+  height: fit-content;
   padding: 26px 40px 40px 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 30px;
+  position: sticky;
+  top: 10px;
   box-shadow: 0 0 28px 0 rgba(0, 0, 0, 0.1);
   background: var(--white);
 }
@@ -2516,6 +2516,7 @@ input:invalid {
   gap: 40px;
 }
 .projects-object__chars {
+  grid-column: 1/2;
   max-width: 990px;
   display: flex;
   flex-direction: column;
@@ -2531,7 +2532,13 @@ input:invalid {
   flex-direction: column;
   gap: 4px;
 }
+.projects-object .accardion {
+  grid-column: 1/2;
+  margin-top: 40px;
+}
 .projects-object__descr-wrapper {
+  grid-column: 1/2;
+  margin-top: 40px;
   max-width: 990px;
   display: flex;
   flex-direction: column;
@@ -2679,6 +2686,25 @@ input:invalid {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+.achievements__item .achievements__numb {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s cubic-bezier(0.12, 0.46, 0.47, 0.99);
+}
+.achievements__item .achievements__numb-text {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s cubic-bezier(0.12, 0.46, 0.47, 0.99);
+  transition-delay: 0.3s;
+}
+.achievements__item.animate .achievements__numb {
+  opacity: 1;
+  transform: translateY(0);
+}
+.achievements__item.animate .achievements__numb-text {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .history__content {
@@ -3142,6 +3168,14 @@ input:invalid {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 20px;
   }
+  .projects-object__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  .projects-object__info {
+    min-height: unset;
+    position: static;
+  }
 }
 @media (max-width: 991px) {
   .footer__address,
@@ -3280,10 +3314,6 @@ input:invalid {
   }
   .achievements__item {
     gap: 16px;
-  }
-  .projects-object__main-content {
-    display: flex;
-    flex-direction: column;
   }
 }
 @media (max-width: 768px) {
@@ -3707,13 +3737,17 @@ input:invalid {
     gap: 28px;
   }
   .projects-object__chars {
+    margin-top: 30px;
     gap: 24px;
   }
   .projects-object__chars-items {
     gap: 20px;
   }
   .projects-object__inner {
-    gap: 80px;
+    gap: 30px;
+  }
+  .page__projects-object .accardion {
+    margin-top: 50px;
   }
   .page__projects-object .accardion .section-swiper__head .h3 {
     font-size: 40px;
@@ -3734,6 +3768,7 @@ input:invalid {
     gap: 30px;
   }
   .projects-object__descr-wrapper {
+    margin-top: 50px;
     gap: 30px;
   }
   .projects-object__descr-wrapper h2 {
@@ -4526,6 +4561,9 @@ input:invalid {
   .page__projects-object .section-swiper__head {
     min-height: 34px;
   }
+  .page__projects-object .accardion {
+    margin-top: 40px;
+  }
   .page__projects-object .accardion__item-title {
     font-size: 20px;
     letter-spacing: -0.01em;
@@ -4549,9 +4587,6 @@ input:invalid {
   }
   .projects-object__slide-image-box {
     height: 542px;
-  }
-  .projects-object__main-content {
-    gap: 20px;
   }
   .projects-object__info {
     padding: 16px 20px;
@@ -4582,12 +4617,14 @@ input:invalid {
     gap: 12px 20px;
   }
   .projects-object__chars {
+    margin-top: 40px;
     gap: 20px;
   }
   .projects-object__inner {
-    gap: 60px;
+    gap: 20px;
   }
   .projects-object__descr-wrapper {
+    margin-top: 40px;
     gap: 20px;
   }
 }

@@ -116,6 +116,16 @@
       gap: 40px 20px;
     }
   }
+
+  .projects-object__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projects-object__info {
+    min-height: unset;
+    position: static;
+  }
 }
 
 @media (max-width: 991px) {
@@ -298,11 +308,6 @@
 
   .achievements__item {
     gap: 16px;
-  }
-
-  .projects-object__main-content {
-    display: flex;
-    flex-direction: column;
   }
 }
 
@@ -868,6 +873,7 @@
   }
 
   .projects-object__chars {
+    margin-top: 30px;
     gap: 24px;
   }
 
@@ -876,10 +882,15 @@
   }
 
   .projects-object__inner {
-    gap: 80px;
+    gap: 30px;
   }
 
   .page__projects-object {
+
+    .accardion {
+      margin-top: 50px;
+    }
+
     .accardion .section-swiper__head .h3 {
       font-size: 40px;
       line-height: 120%;
@@ -905,6 +916,7 @@
   }
 
   .projects-object__descr-wrapper {
+    margin-top: 50px;
     gap: 30px;
 
     h2 {
@@ -1949,6 +1961,10 @@
       min-height: 34px;
     }
 
+    .accardion {
+      margin-top: 40px;
+    }
+
     .accardion__item-title {
       font-size: 20px;
       letter-spacing: -0.01em;
@@ -1979,10 +1995,6 @@
 
   .projects-object__slide-image-box {
     height: 542px;
-  }
-
-  .projects-object__main-content {
-    gap: 20px;
   }
 
   .projects-object__info {
@@ -2022,14 +2034,16 @@
   }
 
   .projects-object__chars {
+    margin-top: 40px;
     gap: 20px;
   }
 
   .projects-object__inner {
-    gap: 60px;
+    gap: 20px;
   }
 
   .projects-object__descr-wrapper {
+    margin-top: 40px;
     gap: 20px;
   }
 }
