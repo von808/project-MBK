@@ -513,6 +513,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let history = document.querySelector('.history');
   if (history) {
+    document.querySelector('.history__dot--active').click();
+    
     (function () {
       var caseItem = document.querySelectorAll('.history__dot'),
       active = document.getElementsByClassName('history__dot--active');
@@ -527,7 +529,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
-  document.querySelector('.history__dot--active').click();
   }
   //============================================================SWIPER-END
 
