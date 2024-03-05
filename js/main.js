@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
       0.4,
     )
   }
-
   //============================================================ANIMATIONS-END
 
   //============================================================FANCYBOX-START
@@ -484,6 +483,52 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     },
   });
+  const sliders = [...document.querySelectorAll('.history-swiper')].map((el, i) => {
+
+    const slider = new Swiper(el, {
+      //loop: true,
+      a11y: false,
+      slidesPerView: 1,
+      // spaceBetween: 20,
+      allowTouchMove: false,
+      pagination: {
+        type: 'custom',
+        el: '.history__dots',
+        clickable: true,
+        bulletClass: 'history__dot',
+        bulletActiveClass: 'history__dot--active',
+      },
+      on: {
+        slideChange() {
+          sliders
+            .filter(n => n !== slider)
+            .forEach(n => n.slideToLoop(this.realIndex));
+        },
+      },
+    });
+
+    return slider;
+  });
+
+
+  let history = document.querySelector('.history');
+  if (history) {
+    (function () {
+      var caseItem = document.querySelectorAll('.history__dot'),
+      active = document.getElementsByClassName('history__dot--active');
+      
+      Array.from(caseItem).forEach(function (item, i, caseItem) {
+        item.addEventListener('click', function (e) {
+          if (active.length > 0 && active[0] !== this)
+          active[0].classList.remove('history__dot--active');
+        
+        this.classList.toggle('history__dot--active');
+      });
+    });
+  })();
+
+  document.querySelector('.history__dot--active').click();
+  }
   //============================================================SWIPER-END
 
   //============================================================INTRO-START
