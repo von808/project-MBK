@@ -4348,6 +4348,10 @@ input:invalid {
   transform: translateY(0);
 }
 
+.history {
+  overflow: hidden;
+}
+
 .history__content {
   display: -ms-grid;
   display: grid;
@@ -4384,6 +4388,7 @@ input:invalid {
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 24px;
+  overflow: hidden;
 }
 
 .history__dots {
@@ -4397,6 +4402,11 @@ input:invalid {
   gap: 40px;
   color: var(--grey-300);
   position: relative;
+  width: unset !important;
+  top: unset !important;
+  right: unset !important;
+  left: unset !important;
+  bottom: unset !important;
 }
 
 .history__dots::before {
@@ -4422,9 +4432,11 @@ input:invalid {
   align-items: center;
   gap: 16px;
   position: relative;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.history__dot span {
+  pointer-events: none;
 }
 
 .history__dot::before {
@@ -4443,6 +4455,7 @@ input:invalid {
 
 .history__dot--active {
   color: var(--blue);
+  pointer-events: none;
 }
 
 .history__dot--active::before {
@@ -4474,6 +4487,10 @@ input:invalid {
   height: 7px;
   border-radius: 50%;
   background-color: var(--blue);
+}
+
+.history .swiper-slide {
+  width: 100% !important;
 }
 
 .history__image-box {
@@ -4983,8 +5000,8 @@ input:invalid {
   }
 
   .history__content {
-    -ms-grid-columns: 1fr 20px 1fr;
-    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: calc(50% - 10px) 20px calc(50% - 10px);
+    grid-template-columns: calc(50% - 10px) calc(50% - 10px);
     -ms-grid-rows: 52px 73px auto;
     grid-template-rows: 52px auto;
     -webkit-box-align: start;
@@ -5030,6 +5047,7 @@ input:invalid {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    gap: 0;
   }
 
   .history__dots::before {
@@ -5080,7 +5098,7 @@ input:invalid {
     max-width: 100%;
   }
 
-  .history__image-box {
+  .history__image-swiper-wrapper {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2/3;
@@ -5781,6 +5799,7 @@ input:invalid {
 
   .history__info-box {
     gap: 20px;
+    padding: 0 1px;
   }
 
   .history__image-box {
@@ -6103,7 +6122,11 @@ input:invalid {
     grid-row: 1/2;
   }
 
-  .history__image-box {
+  .history__info .swiper-wrapper {
+    width: calc(100vw - 40px);
+  }
+
+  .history__image-swiper-wrapper {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/2;
@@ -7168,5 +7191,9 @@ input:invalid {
   .projects-object__descr-wrapper {
     margin-top: 40px;
     gap: 20px;
+  }
+
+  .history__info .swiper-wrapper {
+    width: calc(100vw - 32px);
   }
 }

@@ -58,6 +58,7 @@
 }
 
 .history {
+  overflow: hidden;
   &__inner {}
 
   &__content {
@@ -83,6 +84,7 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    overflow: hidden;
   }
 
   &__dots-wrapper {}
@@ -95,6 +97,12 @@
     color: var(--grey-300);
 
     position: relative;
+
+    width: unset !important;
+    top: unset !important;
+    right: unset !important;
+    left: unset !important;
+    bottom: unset !important;
 
     &::before {
       content: '';
@@ -117,7 +125,13 @@
 
     position: relative;
 
-    transition: all .2s ease;
+    cursor: pointer;
+
+    // transition: all .2s ease;
+
+    span {
+      pointer-events: none;
+    }
 
     &::before {
       content: '';
@@ -134,6 +148,7 @@
 
     &--active {
       color: var(--blue);
+      pointer-events: none;
 
       &::before {
         content: '';
@@ -166,6 +181,10 @@
         background-color: var(--blue);
       }
     }
+  }
+
+  .swiper-slide {
+    width: 100% !important;
   }
 
   &__image-box {

@@ -2707,6 +2707,9 @@ input:invalid {
   transform: translateY(0);
 }
 
+.history {
+  overflow: hidden;
+}
 .history__content {
   display: grid;
   grid-template-columns: minmax(auto, 675px) minmax(70px, 154px) minmax(354px, auto);
@@ -2726,6 +2729,7 @@ input:invalid {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  overflow: hidden;
 }
 .history__dots {
   display: flex;
@@ -2733,6 +2737,11 @@ input:invalid {
   gap: 40px;
   color: var(--grey-300);
   position: relative;
+  width: unset !important;
+  top: unset !important;
+  right: unset !important;
+  left: unset !important;
+  bottom: unset !important;
 }
 .history__dots::before {
   content: "";
@@ -2750,7 +2759,10 @@ input:invalid {
   align-items: center;
   gap: 16px;
   position: relative;
-  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.history__dot span {
+  pointer-events: none;
 }
 .history__dot::before {
   content: "";
@@ -2765,6 +2777,7 @@ input:invalid {
 }
 .history__dot--active {
   color: var(--blue);
+  pointer-events: none;
 }
 .history__dot--active::before {
   content: "";
@@ -2790,6 +2803,9 @@ input:invalid {
   height: 7px;
   border-radius: 50%;
   background-color: var(--blue);
+}
+.history .swiper-slide {
+  width: 100% !important;
 }
 .history__image-box {
   max-width: 671px;
@@ -3107,7 +3123,7 @@ input:invalid {
     display: none;
   }
   .history__content {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: calc(50% - 10px) calc(50% - 10px);
     grid-template-rows: 52px auto;
     align-items: start;
     gap: 73px 20px;
@@ -3119,6 +3135,7 @@ input:invalid {
   .history__dots {
     justify-content: space-between;
     flex-direction: row;
+    gap: 0;
   }
   .history__dots::before {
     top: unset;
@@ -3153,7 +3170,7 @@ input:invalid {
   .history__title {
     max-width: 100%;
   }
-  .history__image-box {
+  .history__image-swiper-wrapper {
     grid-column: 2/3;
     grid-row: 1/3;
   }
@@ -3655,6 +3672,7 @@ input:invalid {
   }
   .history__info-box {
     gap: 20px;
+    padding: 0 1px;
   }
   .history__image-box {
     height: 500px;
@@ -3862,7 +3880,10 @@ input:invalid {
   .history__info {
     grid-row: 1/2;
   }
-  .history__image-box {
+  .history__info .swiper-wrapper {
+    width: calc(100vw - 40px);
+  }
+  .history__image-swiper-wrapper {
     grid-column: 1/2;
     grid-row: 2/3;
   }
@@ -4626,5 +4647,8 @@ input:invalid {
   .projects-object__descr-wrapper {
     margin-top: 40px;
     gap: 20px;
+  }
+  .history__info .swiper-wrapper {
+    width: calc(100vw - 32px);
   }
 }
